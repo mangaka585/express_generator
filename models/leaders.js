@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const promotionSchema = new Schema({
+const leaderSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -28,3 +28,7 @@ const promotionSchema = new Schema({
         default:false
     }
 })
+
+var Leaders = mongoose.model('Leader', leaderSchema);
+
+module.exports = Leaders;
